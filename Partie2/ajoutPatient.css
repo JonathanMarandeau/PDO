@@ -1,0 +1,21 @@
+body {
+    font-family: 'Righteous', cursive;
+}
+h1 {
+    padding-top: 1rem;
+}
+form {
+    padding-top: 2rem;
+}
+.contentPage {
+    background-image: url('accueil.jpg');
+    background-size: 100%;
+    width: 100vw;
+    height: 100vh;
+    background-repeat: no-repeat;
+    opacity: 0.8;
+}
+.formContent {
+    background-color: white;
+    padding: 2rem;
+}

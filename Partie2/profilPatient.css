@@ -1,0 +1,23 @@
+body {
+    font-family: 'Righteous', cursive;
+}
+.contentPage {
+    background-image: url('accueil.jpg');
+    background-size: 100%;
+    width: 100vw;
+    height: 100vh;
+    background-repeat: no-repeat;
+    opacity: 0.8;
+}
+.content {
+    background-color: rgba(0, 0, 0, 0.3);
+    padding: 2rem;
+}
+.buttons {
+    padding: 2rem;
+}
+label {
+    display: block;
+    width: 200px;
+    float: left;
+}

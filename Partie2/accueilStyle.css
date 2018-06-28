@@ -1,0 +1,24 @@
+body{
+    font-family: 'Righteous', cursive;
+}
+.accueilBg {
+    background-image: url('accueil.jpg');
+    background-size: 100%;
+    width: 100vw;
+    height: 100vh;
+    background-repeat: no-repeat;
+    opacity: 0.8;
+}
+.title {
+    padding-top: 15rem;
+}
+h1 {
+  color: black;  
+}
+.newPatient {
+    padding-top: 4rem;
+}
+a {
+    background-color: black;
+    color: white;
+}
