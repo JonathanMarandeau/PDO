@@ -13,7 +13,7 @@ $getAllDetailsPatient = $patients->getAllDetailsPatient();
 $regexName = '/^[a-zA-Zàáâãäåçèéêëìíîïðòóôõöùúûüýÿ-]+$/';
 $regexEmail = '/^[^\W][a-zA-Z0-9_]+(\.[a-zA-Z0-9_]+)*\@[a-zA-Z0-9_]+(\.[a-zA-Z0-9_]+)*\.[a-zA-Z]{2,4}$/';
 $regexPhone = '/^[0-9]{10,10}$/';
-// Mise en place de regex type americain pour la date (elle se mets via le type date de l'input)
+// Mise en place de regex type americain pour la date (elle se mets en français via le type date de l'input)
 $regexBirthdate = '/^((19|20)[0-9]{2})\-(0[1-9]|1[012])\-(0[1-9]|([1-2][0-9])|3[01])$/'; 
 
 //Création d'un tableau pour retranscrire les erreurs lord du remplissage du formulaire

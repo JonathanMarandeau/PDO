@@ -9,15 +9,3 @@ body {
     background-repeat: no-repeat;
     opacity: 0.8;
 }
-.content {
-    background-color: rgba(0, 0, 0, 0.4);
-    padding: 2rem;
-}
-.buttons {
-    padding: 2rem;
-}
-label {
-    display: block;
-    width: 200px;
-    float: left;
-}

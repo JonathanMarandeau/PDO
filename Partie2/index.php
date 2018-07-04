@@ -15,7 +15,7 @@
             </div>
             <!-- Div pour lien vers la page ajouter un nouveau patient ou autre -->
             <div class="newPatient text-center">
-                <a href="#" class="btn btn-lg active" role="button" aria-pressed="true">Nouveau rendez-vous</a>
+                <a href="ajout-rendezvous.php" class="btn btn-lg active" role="button" aria-pressed="true">Nouveau rendez-vous</a>
                 <a href="ajout-patient.php" class="btn btn-lg active" role="button" aria-pressed="true">Ajouter patient</a>
                 <a href="liste-patients.php" class="btn btn-lg active" role="button" aria-pressed="true">Liste patients</a>                 
             </div>

@@ -18,11 +18,9 @@ include 'Controllers/detailsPatient.php';
                 <h1 class="text-center">PROFIL DU PATIENT</h1>
                 <div class="content text-center">
                     <!-- Si le formulaire a bien été envoyé, on le notifie a l'utilisateur -->
-                    <?php
-                    if ($addSuccess) {
-                        echo 'Formulaire envoyé';
-                    }
-                    ?>
+                    <?php if ($addSuccess) { ?>
+                        <p>Modifications effectuées !</p>    
+                    <?php } ?>
                     <form action="profil-patient.php?idPatient=<?= $patients->id ?>" method="POST">
                         <?php if ($getAllDetailsPatient) { ?>                       
                             <label for="id">Identifiant : </label><input type="int" name="id" value="<?= $patients->id ?>" disabled /><br />

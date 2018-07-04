@@ -36,7 +36,7 @@ include 'Controllers/showListPatients.php';
                                     <td><?= $patientDetails->firstname ?></td>
                                     <td><a href="profil-patient.php?idPatient=<?= $patientDetails->id ?>">Profil</a></td>
                                 </tr>                           
-                            </tbody>
+                        </tbody>
                         <?php } ?>
                     </table>
                 </div>

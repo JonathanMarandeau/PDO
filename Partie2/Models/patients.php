@@ -19,8 +19,8 @@ class patients extends database {
      *  les champs rempli dans le formulaire
      */
     public function addPatient() {
-         // Insertion des données du patient à l'aide d'une requête préparée avec un INSERT INTO et le nom des champs de la table
-        // Insertion des valeurs des variables via les marqueurs nominatifs, ex :lastname).
+        // Insertion des données du patient à l'aide d'une requête préparée avec un INSERT INTO et le nom des champs de la table
+        // Insertion des valeurs des variables via les marqueurs nominatifs, ex: :lastname).
         $query = 'INSERT INTO `patients` (`lastname`, `firstname`, `birthdate`, `phone`, `mail`) VALUES (:lastname, :firstname, :birthdate, :phone, :mail)';
         $addPatient = $this->db->prepare($query);
         // on attribue les valeurs via bindValue et on recupère les attributs de la classe via $this
@@ -32,13 +32,16 @@ class patients extends database {
         // on utilise la méthode execute() via un return
         return $addPatient->execute();
     }
-    
+    /**
+     * On crée une méthode pour récupérer la liste de tous les patients
+     * @return array
+     */
     // LISTE DES PATIENTS (EXO 2)
     public function getAllPatients() {
         /* On mets notre requète dans la variable query
          * Je veux les nom et prénoms des patients             
          */
-        $query = 'SELECT `id`, `lastname`, `firstname` FROM `patients`';
+        $query = 'SELECT `id`, `lastname`, `firstname` FROM `patients` ORDER BY `lastname`';
         // On crée une variable $listAllPatients qui exécute la requète $query avec la méthode query
         $listAllPatients = $this->db->query($query);
         /* On crée la variable $resultList qui va nous permettre de retourner le resultat 
@@ -86,7 +89,7 @@ class patients extends database {
     public function updatePatient() {
         $query = 'UPDATE `patients` SET `lastname` = :lastname, `firstname` = :firstname, `birthdate` = :birthdate, `phone` = :phone, `mail` = :mail WHERE `id` = :id';
         $modifyPatient = $this->db->prepare($query);
-        $modifyPatient->bindValue (':id', $this->id, PDO::PARAM_STR);
+        $modifyPatient->bindValue (':id', $this->id, PDO::PARAM_INT);
         $modifyPatient->bindValue (':lastname', $this->lastname, PDO::PARAM_STR);
         $modifyPatient->bindValue (':firstname', $this->firstname, PDO::PARAM_STR);
         $modifyPatient->bindValue (':birthdate', $this->birthdate, PDO::PARAM_STR);
